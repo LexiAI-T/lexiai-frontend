@@ -1,0 +1,188 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Custom dark variant if needed */
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: light dark;
+  --radius: 0.625rem;
+
+  /* Light Theme Colors */
+  --background: #ffffff;
+  --foreground: #fff;
+  --card-foreground: #213547;
+  --primary: #0a0a0a;
+  --primary-foreground: #ffffff;
+  --secondary: #f2f2f2;
+  --secondary-foreground: #333333;
+  --muted: #f2f2f2;
+  --muted-foreground: #666666;
+  --accent: #f2f2f2;
+  --accent-foreground: #333333;
+  --destructive: #ff4d4f;
+  --border: #e0e0e0;
+  --input: #f0f0f0;
+  --ring: #b3b3b3;
+
+  /* Charts / Brand colors */
+  --chart-1: #facc15;
+  --chart-2: #38bdf8;
+  --chart-3: #818cf8;
+  --chart-4: #4ade80;
+  --chart-5: #f472b6;
+}
+
+.dark {
+  --background: #121212;
+  --foreground: #ffffff;
+  --card: #1f1f1f;
+  --card-foreground: #ffffff;
+  --primary: #ffffff;
+  --primary-foreground: #000000;
+  --secondary: #2c2c2c;
+  --secondary-foreground: #ffffff;
+  --muted: #2c2c2c;
+  --muted-foreground: #aaaaaa;
+  --accent: #2c2c2c;
+  --accent-foreground: #ffffff;
+  --destructive: #ff4d4f;
+  --border: #333333;
+  --input: #2b2b2b;
+  --ring: #6366f1;
+
+  --chart-1: #eab308;
+  --chart-2: #0ea5e9;
+  --chart-3: #6366f1;
+  --chart-4: #22c55e;
+  --chart-5: #ec4899;
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Headings */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* Buttons */
+button {
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes scale-x {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-scale-x {
+  animation: scale-x 2s ease-out 1.5s forwards;
+}
+
+/* Custom scroll animations */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-animate.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-animate-scale {
+  opacity: 0;
+  transform: translateY(40px) scale(0.9);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-animate-scale.animate {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.scroll-animate-slide-right {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-animate-slide-right.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-animate-slide-left {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-animate-slide-left.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-animate-zoom {
+  opacity: 0;
+  transform: scale(0.8) rotate(-10deg);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-animate-zoom.animate {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.scroll-animate-bounce {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.scroll-animate-bounce.animate {
+  opacity: 1;
+  transform: translateY(0);
+}

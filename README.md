@@ -1,3 +1,4 @@
+
 # LexiAI Frontend ⚡
 
 ## Overview
@@ -58,3 +59,4 @@ npm test
 
 ## Contact
 For frontend issues or ideas, reach out to `@devspark-s8`.
+=======
